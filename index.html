@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOEOU DOODLE</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animate.min.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">  
+</head>
+<body>
+  <div id="warpper">
+    <div id="judgeWarpper">
+      <div id="judge">
+        <button id="encourage">鼓励</button>
+        <button id="taunt">嘲讽</button>
+      </div>
+    </div>
+    <div id="tipsWarpper"></div>
+    <div id="setNameWarpper">
+      <div id="setNamePanel">
+        <div class="title">
+          <h1>MOEOU 你画我猜</h1>
+          <p id="setNameAlert">我们先设置一个名字</p>
+        </div>
+        <div class="form">
+          <span class="formInner">
+            <input type="text" placeholder="" id="playerName">
+            <button><span class="fa fa-angle-right" id="setNameBtn"></span></button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div id="roomSelectorWarpper" style="display: none;">
+      <div id="roomSelector">
+        <div class="title">
+          <h1>开房</h1>
+          <p id="setRoomAlert">现在我们可以开个房玩耍了 试试随便输入吧 只允许八位以内数字哦</p>
+        </div>
+        <div class="form">
+          <input type="text" id="roomNumber"><br>
+          <button id="setRoomNumber">进入房间</button>
+          <button id="joinRoomByRand">随便进一个咯</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="drawBoardWarpper" style="display: none;">
+      <div id="drawBoard">
+        <div id="playersArea">
+          <div class="title">
+            <div class="exitRoom"><button id="exitRoom"><span class="fa fa-angle-left"></span></button></div>
+            <div class="exitRoomTitle">RID:12345678</div>
+          </div>
+          
+        </div>
+        <canvas id="canvas"></canvas>
+        <div id="chatroom">
+          <div id="quesTitle">题目 & 答案</div>
+          <div class="info"><span class="fa fa-clock-o">&emsp;</span><span id="clock"></span></div>
+          <div id="chatArea">
+            <div id="setChatArea">
+              <button class="chgChatRoom active" value="0"><span id="haveMsg0" style="display: none; color: #e74c3c;">●</span>房内</button>
+              <button class="chgChatRoom" value="1"><span id="haveMsg1" style="display: none; color: #e74c3c;">●</span>公屏</button>
+            </div>
+            <div id="chatBody" class="chatRoom0"></div>
+            <div id="chatBodyCommen" class="chatRoom1" style="display: none;"></div>
+            <div id="msg">
+              <div>
+                <input type="text" id="sendMsg">
+                <button type="button" id="sendMsgBtn">发送</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="paintSettings">
+        <div id="readyBtn">
+          <button id="ready" type="button" value="1">准备</button>
+        </div>
+        <div id="paintState">
+          <div class="paintInfo">
+            <div class="title">画笔颜色:</div>
+            <div class="btns">
+              <button class="" id="clear"></button>
+              <button class="paint earser" value="#fff"></button>
+              <button class="paint bgBlack btnActive" value="#000"></button>
+              <button class="paint bgRed" value="#e74c3c"></button>
+              <button class="paint bgGreen" value="#27ae60"></button>
+              <button class="paint bgYellow" value="#ff0"></button>
+              <button class="paint bgBlue" value="#3498db"></button>
+              <button class="paint bgPurple" value="#9b59b6"></button>
+              <button class="paint bgGainsboro" value="#dcdcdc"></button>
+              <button class="paint bgGold" value="#ffd700"></button>
+              <button class="paint bgFuchsia" value="#ff00ff"></button>
+              <button class="paint bgLightBlue" value="#ADD8E6"></button>
+              <button class="paint bgPink" value="#ffc0cb"></button>
+              <button class="paint bgCadeBlue" value="#5f9ea0"></button>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="paintInfo" style="line-height: 25px;">
+            <div class="title">画笔粗细:</div>
+            <div class="btns">
+              <input type="range" name="points" min="1" max="20" id="setLineWidth" value="7" style="margin-top: 5px; margin-left: 12px;"/>
+              <span id="rangeNum" style="font-size: 24px; padding-left: 20px;">7</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/ydig.js"></script>
+</body>
+</html>
